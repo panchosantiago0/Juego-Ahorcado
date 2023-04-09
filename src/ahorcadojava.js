@@ -14,7 +14,7 @@
 
     function ingresarPalabra(){
     let palabra = "";
-    // Solicita al usuario que ingrese una palabra hasta que se ingrese una palabra válidaj
+    // Solicita al usuario que ingrese una palabra hasta que se ingrese una palabra válidajhhj
     while (!/^[a-zA-Z]+$/.test(palabra)) {
         palabra = prompt("Ingresa una palabra para adivinar!");
 
