@@ -1,5 +1,5 @@
     var intentos = 6;
-    var arrCoincidencias = []; // esto es para corregir!
+    var arrCoincidencias = []; 
     const palabrAdivinar = ingresarPalabra();
 
     creaTablero(palabrAdivinar);
