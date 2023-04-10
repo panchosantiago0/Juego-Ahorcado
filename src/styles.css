@@ -13,7 +13,7 @@
   text-align: center;
   font-size: 36px;
   text-shadow: 2px 2px 0 #555, 4px 4px 0 #666, 6px 6px 0 #777, 8px 8px 0 #888, 10px 10px 0 #999;
-  color:white; /*color rojo para un efecto de sangre*/
+  color:white; 
 }
 .mi-clase {
   text-align: center; color: white; font-family: 'MuseoModerno', cursive;
@@ -34,6 +34,9 @@ body {
 .input {
   display: block;
   margin: auto;
+  background: #141d25;
+  color: white;
+
 }
 .tabla {
   width: 250px;
@@ -47,16 +50,13 @@ body {
   color: white;
   box-shadow: 7px 13px 37px #000000;
 }
-.recibirtabla {
-  width: 250px;
-  background: #f2f6fa;
-  padding: 30px;
-  margin: auto;
-  margin-top: 20px;
-  margin-block: 20px;
-  border-radius: 1px;
-  font-family: 'calibri';
-  color: rgb(0, 0, 0);
-  box-shadow: 7px 13px 37px #000000;
-}
+.boton {
+  width: 100%;
+  background: #333;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  }
 

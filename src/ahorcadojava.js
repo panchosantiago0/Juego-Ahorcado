@@ -53,7 +53,7 @@
         tablaHTML += "</tr></table>";
         tablero.innerHTML = tablaHTML;
 
-        document.getElementById("intentos").innerHTML = '<p>Intentos Restantes</p>'+intentos;
+        document.getElementById("intentos").innerHTML = 'Intentos Restantes:  '+intentos;
         document.getElementById("intentos").classList.add("mi-clase");
     }
     
@@ -63,7 +63,7 @@
 
         if(!pattern.test(cadena)){
             document.querySelector('input').value = "";
-            document.getElementById("status").innerHTML = "Solo puedes ingresar letras!!!..";
+            document.getElementById("status").innerHTML = "Solo puedes ingresar letras!!!";
             return false;
         }else{
             return true;
@@ -91,6 +91,7 @@
             if (arrCoincidencias.indexOf("?") == -1) {
                 document.getElementById("resultado").innerHTML = '<p>¡Ganaste!</p>';
                 document.getElementById("resultado").classList.add("mi-clase");
+                letra.disable = true;
             }
             
         }else{
@@ -103,7 +104,9 @@
             if(intentos==0){
                 document.getElementById("resultado").innerHTML = '<p>Perdiste</p>';
                 document.getElementById("resultado").classList.add("mi-clase");
+                letra.disable = true;
             }
+            
         }
 
 
@@ -111,27 +114,27 @@
             let imagen = document.getElementById("imagen");
             
             switch (intentos) {
-                case 1:
+                case 0:
                     imagen.src = "img/A.png";
                     break;
 
-                case 2:
+                case 1:
                     imagen.src = "img/B.png";
                     break;
                 
-                case 3:
+                case 2:
                     imagen.src = "img/C.png";
                     break;
                 
-                case 4:
+                case 3:
                     imagen.src = "img/D.png";
                     break;
                 
-                case 5:
+                case 4:
                     imagen.src = "img/E.png";
                     break;
                 
-                case 6:
+                case 5:
                     imagen.src = "img/F.png";
                     break;
 
@@ -141,7 +144,6 @@
 
     function mostrarTablero(letra){
         let tablero = document.getElementById("tablero");
-        document.getElementById("tablero").classList.add("recibirtabla");
         let tablaHTML = "<table><tr>";
         
         for (let i = 0; i < palabrAdivinar.length; i++) {
@@ -156,5 +158,8 @@
 
         tablaHTML += "</tr></table>";
         tablero.innerHTML = tablaHTML;
+    }
+    function reloadPage() {
+        location.reload();
     }
     
